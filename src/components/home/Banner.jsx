@@ -4,8 +4,8 @@ import image from '../../../public/assets/images/Contact Banner.png'
 
 const Banner = () => {
   return (
-    <div className='flex'>
-        <Image src={image} ></Image>
+    <div className='flex my-10'>
+        <Image className='w-full' src={image} ></Image>
       
     </div>
   )

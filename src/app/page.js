@@ -1,10 +1,10 @@
 import AboutUs from "@/components/home/about/AboutUs";
+import Banner from "@/components/home/Banner";
 import LandingPart from "@/components/home/LandingPart";
-import ProductSection from "@/components/home/Products/ProductSection";
-import ProjectSection from "@/components/home/ProjectSection";
+import Project from "@/components/home/project/Project";
 import SubBrand from "@/components/home/subBrand/SubBrand";
 import Testimonials from "@/components/home/Testimonials/Testimonials";
-import Image from "next/image";
+
 
 export default function Home() {
   return (
@@ -12,6 +12,8 @@ export default function Home() {
      <LandingPart/>
      <AboutUs/>
      <SubBrand/>
+     <Project/>
+     <Banner/>
      <Testimonials/>
     </div>
   );

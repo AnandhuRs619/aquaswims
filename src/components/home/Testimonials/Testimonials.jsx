@@ -5,7 +5,7 @@ import TitlePart from '../common/TitlePart'
 
 const Testimonials = () => {
   return (
-    <div className=" min-h-screen mx-auto mt-5 p-4">
+    <div className=" mx-auto mt-10 p-4">
 
          <TitlePart
       Title="TESTIMONIALS"

@@ -4,13 +4,13 @@ import Link from "next/link";
 
 const LandingPart = () => {
   const sample =
-    "https://firebasestorage.googleapis.com/v0/b/kmaassets-afcf8.appspot.com/o/WhatsApp%20Video%202024-08-28%20at%2012.32.09_827ceb27.mp4?alt=media&token=4258c900-c172-4730-9ed7-005d45b9207e";
+    "https://www.youtube.com/watch?v=17lknIMVx5Y";
   return (
     <div className="h-screen relative w-full flex flex-col items-center text-white bg-white">
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="h-screen relative w-full flex flex-col items-center text-white bg-white">
           <div className="absolute w-screen h-screen bg-black/40 z-10 top-0 left-0"></div>
-          <VideoBackground videoSrc={sample} />
+          <VideoBackground videoSrc="/assets/videos/Top Video.mp4" />
         </div>
       </div>
 
