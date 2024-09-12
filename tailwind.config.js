@@ -11,6 +11,10 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      clipPath: {
+        'top-right': 'polygon(0 0, 100% 0, 100% 100%, 0 70%)',
+        'bottom-left': 'polygon(0 0, 100% 30%, 100% 100%, 0 100%)',
+      },
     },
   },
   plugins: [],
