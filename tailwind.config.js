@@ -12,7 +12,7 @@ module.exports = {
         foreground: "var(--foreground)",
       },
       clipPath: {
-        'top-right': 'polygon(0 0, 100% 0, 100% 100%, 0 70%)',
+        'top-right':  'circle(50% at 100% 0%)',
         'bottom-left': 'polygon(0 0, 100% 30%, 100% 100%, 0 100%)',
       },
     },

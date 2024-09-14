@@ -1,27 +1,24 @@
-import React from 'react';
-import Image from 'next/image';
+import Image from "next/image";
 
-const ProductCard = ({ title, description, imageUrl }) => {
+const ProductCard = ({ product, onClick, isActive }) => {
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow-lg flex flex-col">
-      {/* Image will take the full width and be rounded at the top */}
-      <div className="w-full h-64 relative">
+    <div
+      className={`relative w-full h-auto shadow-lg rounded-lg cursor-pointer transform transition-transform ${
+        isActive ? " scale-105" : "border-transparent"
+      }`}
+      onClick={onClick}
+    >
+      <div className="relative">
         <Image
-          src={imageUrl}
-          alt={title}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-t-xl"
+          src={product.image}
+          alt={product.name}
+         className="w-full h-96 object-cover rounded-xl"
         />
-      </div>
-
-      {/* Card Content */}
-      <div className="p-4 flex flex-col items-start">
-        <h3 className="text-xl font-bold">{title}</h3>
-        <p className="text-sm text-gray-600 mt-2">{description}</p>
-        <button className="mt-4 bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors">
-          More Info
-        </button>
+      <div className="absolute bottom-0 left-0 lg:w-44 rounded-r-full p-4 bg-white">
+          <div className="text-black text-sm font-bold">
+            {product.name}
+          </div>
+        </div>
       </div>
     </div>
   );

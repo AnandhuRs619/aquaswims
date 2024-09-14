@@ -7,10 +7,10 @@ const ImageCard = ({ imageUrl, title }) => {
     <div className="relative w-full h-auto overflow-hidden my-10 transition-transform transform hover:scale-105">
       <div className="relative">
         {/* Image Section */}
-        <Image src={imageUrl} alt={title} className="w-full h-96 object-cover rounded-lg" />
+        <Image src={imageUrl} alt={title} className="w-full h-96 object-cover rounded-xl" />
         
         {/* Top Right Curve with Arrow Icon */}
-        <div className="absolute -top-4 -right-4 w-20 h-20 bg-white rounded-tr-lg clip-top-right flex items-center justify-center">
+        <div className="absolute -top-4 right-0 w-20 h-20 bg-white rounded-tr-lg clip-top-right flex items-center justify-center">
           <FiArrowUpRight className="text-gray-800 text-4xl font-extrabold" />
         </div>
         

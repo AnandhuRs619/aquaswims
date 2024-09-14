@@ -17,7 +17,7 @@ const AboutUs = () => {
       highlight="R&R INFRA:"
       subTitle2="YOUR COMPLETE ENGINEERING SOLUTIONS"
       left={true}
-      />
+      /> 
       <div data-aos="zoom-out-right">
        <p className="text-sm text-gray-600 my-5">
           From Modern Concepts to Fiberglass Pools - We’ve Got You Covered!

@@ -1,76 +1,165 @@
 "use client";
-import React, { useState, useEffect, useRef } from 'react';
-import ProductCard from './ProductCard';
-import pImage from '../../../../public/assets/Product.png';
+import React, { useState } from "react";
+import Image from "next/image";
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import TitlePart from "../common/TitlePart";
+import capsuleHutImg from "../../../../public/assets/images/Pool Img1.jpg";
+import hrpFrpImg from "../../../../public/assets/images/Pool Img1.jpg";
+import aquaSwimsImg from "../../../../public/assets/images/Pool Img1.jpg";
+import ProductSlider from "./ProductSlider";
+import ProductDetails from "./ProductDetails";
+import CategoryTabs from "./CategoryTabs";
+import ProductCard from "./ProductCard";
 
-const products = [
-  { id: 1, title: 'AS 35', description: 'Brief description....', imageUrl: pImage },
-  { id: 2, title: 'AS 25', description: 'Brief description....', imageUrl: pImage },
-  { id: 3, title: 'PF 20', description: 'Brief description....', imageUrl: pImage },
-  { id: 4, title: 'PF 21', description: 'Brief description....', imageUrl: pImage },
-  { id: 5, title: 'PF 22', description: 'Brief description....', imageUrl: pImage },
-  { id: 6, title: 'PF 23', description: 'Brief description....', imageUrl: pImage },
-];
-
-// Duplicate products for infinite loop effect
-const infiniteProducts = [...products, ...products];
+const productsData = {
+  CapsuleHut: [
+    {
+      id: "e244",
+      name: "Hut - e244",
+      image: capsuleHutImg,
+      keyFeatures: [
+        "Sleek and Elegant Design",
+        "Minimalist Aesthetics",
+        "Compact and Lightweight",
+      ],
+    },
+    {
+      id: "e222",
+      name: "Hut - e244",
+      image: capsuleHutImg,
+      keyFeatures: [
+        "Sleek and Elegant Design",
+        "Minimalist Aesthetics",
+        "Compact and Lightweight",
+      ],
+    },
+    {
+      id: "e122",
+      name: "Hut - e244",
+      image: capsuleHutImg,
+      keyFeatures: [
+        "Sleek and Elegant Design",
+        "Minimalist Aesthetics",
+        "Compact and Lightweight",
+      ],
+    },
+    {
+      id: "e265",
+      name: "Hut - e244",
+      image: capsuleHutImg,
+      keyFeatures: [
+        "Sleek and Elegant Design",
+        "Minimalist Aesthetics",
+        "Compact and Lightweight",
+      ],
+    },
+    {
+      id: "e245",
+      name: "Hut - e244",
+      image: capsuleHutImg,
+      keyFeatures: [
+        "Sleek and Elegant Design",
+        "Minimalist Aesthetics",
+        "Compact and Lightweight",
+      ],
+    },
+    {
+      id: "e234",
+      name: "Hut - e244",
+      image: capsuleHutImg,
+      keyFeatures: [
+        "Sleek and Elegant Design",
+        "Minimalist Aesthetics",
+        "Compact and Lightweight",
+      ],
+    },
+    // Add more products here...
+  ],
+  HRPFRP: [
+    {
+      id: "f349",
+      name: "HRP - f349",
+      image: hrpFrpImg,
+      keyFeatures: [
+        "High-Quality Materials",
+        "Robust and Durable",
+        "Environmentally Friendly",
+      ],
+    },
+    // Add more products here...
+  ],
+  AquaSwims: [
+    {
+      id: "a750",
+      name: "Aqua Swims - a750",
+      image: aquaSwimsImg,
+      keyFeatures: [
+        "Innovative Design",
+        "Perfect for Water Activities",
+        "Lightweight and Portable",
+      ],
+    },
+    // Add more products here...
+  ],
+};
 
 const ProductSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const intervalRef = useRef(null);
+  const [selectedCategory, setSelectedCategory] = useState("CapsuleHut");
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
-  // Function to start the slider interval
-  const startSlider = () => {
-    intervalRef.current = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % infiniteProducts.length);
-    }, 5000);
-  };
+  const products = productsData[selectedCategory];
 
-  // Function to stop the slider interval
-  const stopSlider = () => {
-    clearInterval(intervalRef.current);
-  };
-
-  // Start the slider when the component mounts
-  useEffect(() => {
-    startSlider();
-    return () => clearInterval(intervalRef.current); // Clear interval when component unmounts
-  }, []);
-
-  // Calculate the sliding style based on current index
-  const slideStyle = {
-    transform: `translateX(-${currentIndex * (100 / 3)}%)`,
-    transition: 'transform 0.5s ease-in-out',
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
   };
 
   return (
-    <div className="w-full">
-      {/* Section with white background for heading and subheading */}
-      <div className="bg-white py-12">
-        <div className="container mx-auto px-6 sm:px-12 lg:px-20">
-          <h1 className="text-4xl font-bold text-yellow-600 mb-4">Projects</h1>
-          <h2 className="text-3xl text-center font-bold mb-8">Our Pool Filters</h2>
-        </div>
-      </div>
+    <div className="min-h-screen mx-auto p-6">
+      <TitlePart
+        Title="Products"
+        subTitle1="Meet the"
+        highlight="Visionaries:"
+        subTitle2="Our Quirky Journey to Hardware Greatness!"
+        left={true}
+      />
 
-      {/* Slider section inside a card with bg-gray-200 */}
-      <div className="bg-gray-200 w-full py-20">
+      {/* Category Tabs */}
+      <CategoryTabs
+        categories={Object.keys(productsData)}
+        selectedCategory={selectedCategory}
+        onCategoryChange={(category) => {
+          setSelectedCategory(category);
+          setSelectedProduct(null);
+        }}
+      />
 
-        <div className="container w-4/5 mx-auto overflow-hidden "> {/* Adjust the gap with padding */}
-          <div
-            className="grid grid-flow-col sm:grid-cols-1 auto-cols-[100%] sm:auto-cols-[33.33%] gap-x-6" // Added gap-x for spacing
-            style={slideStyle}
-            onMouseEnter={stopSlider} // Stop sliding on mouse enter
-            onMouseLeave={startSlider} // Resume sliding on mouse leave
-          >
-            {infiniteProducts.map((product, index) => (
-              <div key={index} className="w-full">
-                <ProductCard {...product} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <Slider {...settings}>
+        {products.map((product,index ) => (
+          <ProductCard
+            key={index}
+            product={product}
+            onClick={() => onProductClick(product)}
+            isActive={selectedProduct?.id === product.id}
+          />
+        ))}
+      </Slider>
+
+      {/* Product Slider */}
+      {/* <ProductSlider
+        products={products}
+        selectedProduct={selectedProduct}
+        onProductClick={(product) => setSelectedProduct(product)}
+      /> */}
+
+      {/* Product Details */}
+      {selectedProduct && <ProductDetails product={selectedProduct} />}
     </div>
   );
 };

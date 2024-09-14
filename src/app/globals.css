@@ -14,7 +14,7 @@ body {
 }
 
 .clip-top-right {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+  clip-Path: circle(100% at 100% 0% )
 }
 
 .clip-bottom-left {
