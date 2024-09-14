@@ -128,7 +128,7 @@ const ProductSection = () => {
   }
 
   return (
-    <div className="min-h-screen mx-auto overflow-hidden mb-20 ">
+    <div className="min-h-screen mx-auto overflow-hidden lg:mb-20 ">
       {/* Title part */}
       <TitlePart
         Title="Products"
@@ -139,7 +139,7 @@ const ProductSection = () => {
       />
 
       {/* Body part */}
-      <div className="relative w-full h-full mt-3 ">
+      <div className="relative w-full h-full mt-3 pb-14">
         {/* bg-side gray part */}
         <div className="h-full min-w-[98vw] lg:min-w-[50vw] bg-[#F5F5F5] absolute top-0 rounded-l-xl lg:rounded-l-2xl right-0 -z-10"> </div>
 
