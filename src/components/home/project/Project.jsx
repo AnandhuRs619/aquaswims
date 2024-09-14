@@ -2,13 +2,14 @@
 import React, { useState, useEffect } from "react";
 import TitlePart from "../common/TitlePart";
 import Image from "next/image";
+import { images } from "@/data/projectData";
 
 // Sample images array
-const images = [
-  "/assets/images/AboutImg.png",
-  "/assets/images/Project1.png",
-  "/assets/images/Pool Img2.jpg",
-];
+// const images = [
+//   "/assets/images/AboutImg.png",
+//   "/assets/images/Project1.png",
+//   "/assets/images/Pool Img2.jpg",
+// ];
 
 const Project = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -52,9 +53,9 @@ const Project = () => {
         <div className="lg:w-1/2">
           <TitlePart
             Title="PROJECTS"
-            subTitle1="BUILDING DREAMS WITH"
-            highlight="R&R INFRA:"
-            subTitle2="YOUR COMPLETE ENGINEERING SOLUTIONS"
+            subTitle1="Meet the "
+            highlight="Visionaries:"
+            subTitle2="Our Quirky Journey to Hardware Greatness!"
             left={false}
           />
           <p className="text-base text-gray-600 my-5" data-aos="fade-up-left">

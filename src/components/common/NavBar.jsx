@@ -13,7 +13,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center py-4 px-10 sticky">
+    <nav className="flex justify-between items-center py-4 px-10 pos">
       {/* Logo Section */}
       <div className="flex items-center space-x-2">
         <Image 

@@ -4,7 +4,7 @@ import image from '../../../public/assets/images/Contact Banner.png'
 
 const Banner = () => {
   return (
-    <div className='flex my-10'>
+    <div className='flex my-20'>
         <Image className='w-full' src={image} ></Image>
       
     </div>
