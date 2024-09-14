@@ -24,7 +24,7 @@ const Project = () => {
   }, []);
 
   return (
-    <div className="min-h-screen mx-auto p-6 mb-10">
+    <div className=" mx-auto p-6 mb-10">
       <div className="flex flex-col lg:flex-row mt-10 lg:gap-16 gap-8">
         <div className="relative flex lg:w-1/2 mt-10 lg:mt-0 lg:ml-10">
           <div className="relative w-full h-[400px] lg:h-[550px] rounded-l-xl overflow-hidden">

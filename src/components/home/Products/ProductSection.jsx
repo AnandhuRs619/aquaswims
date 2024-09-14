@@ -121,7 +121,7 @@ const ProductSection = () => {
   };
 
   return (
-    <div className="min-h-screen mx-auto p-6">
+    <div className="mx-auto p-6 mb-10">
       <TitlePart
         Title="Products"
         subTitle1="Meet the"

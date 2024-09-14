@@ -16,10 +16,26 @@ const Testimonials = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024, // For tablet and above
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 768, // For mobile view (768px and below)
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   };
 
   return (
-    <div className="mx-auto my-10 p-4">
+    <div className=" mx-auto p-6 mb-10">
       <TitlePart
         Title="TESTIMONIALS"
         subTitle1="MEET THE"

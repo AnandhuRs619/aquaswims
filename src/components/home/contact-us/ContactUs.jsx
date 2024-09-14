@@ -6,12 +6,12 @@ import img from '../../../../public/assets/images/contact-image.png'
 
 const ContactUs = () => {
   return (
-    <div className='mx-auto p-6 bg-cover bg-center'>
+    <div className='mx-auto p-6'>
       <TitlePart
         Title="Contact us"
-        subTitle1="Our friendly "
-        highlight="team :"
-        subTitle2="would love to hear from you"
+        subTitle1="Have a Cool Projects ? "
+        highlight="Get in touch "
+        // subTitle2="would love to hear from you"
         left={true}
       /> 
 

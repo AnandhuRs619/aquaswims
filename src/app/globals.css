@@ -40,37 +40,9 @@ body {
   z-index: 1;
 }
 
-/* HOME */
-.homeButton {
-  position: relative;
-  overflow: hidden;
-  background-color: white;
-  color: red;
-  transition: color 0.4s ease-in-out;
+/* styles/globals.css */
+
+html {
+  scroll-behavior: smooth;
 }
 
-.homeButton::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 100%;
-  width: 100%;
-  height: 100%;
-  background-color: red;
-  border-radius: inherit;
-  transition: right 0.4s ease-in-out;
-  z-index: 0;
-}
-
-.homeButton:hover::before {
-  right: 0;
-}
-
-.homeButton:hover {
-  color: white;
-}
-
-.homeButton > span {
-  position: relative;
-  z-index: 1;
-}

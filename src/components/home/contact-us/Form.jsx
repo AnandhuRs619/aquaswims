@@ -27,7 +27,7 @@ const Form = () => {
     <div>
       <form className="max-w-md mx-auto h-full w-full" onSubmit={handleSubmit} >
         <div>
-          <h1 className='text-2xl mb-6 font-bold'>Get in touch</h1>
+          <h1 className='text-2xl mb-6 font-bold'>Write To Us</h1>
           {/* <p className='text-md mb-10 text-accent'>Our friendly team would love to hear from you.</p> */}
         </div>
         <div className='flex flex-row justify-between gap-2'>
