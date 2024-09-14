@@ -14,7 +14,7 @@ body {
 }
 
 .clip-top-right {
-  clip-Path: circle(100% at 100% 0% )
+  clip-path: circle(100% at 100% 0%);
 }
 
 .clip-bottom-left {
@@ -70,4 +70,15 @@ body {
 .homeButton > span {
   position: relative;
   z-index: 1;
+}
+
+/* Custom class to hide the scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* For Webkit browsers */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
