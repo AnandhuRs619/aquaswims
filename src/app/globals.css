@@ -17,7 +17,7 @@ body {
 }
 
 .clip-top-right {
-  clip-Path: circle(100% at 100% 0% )
+  clip-path: circle(100% at 100% 0%);
 }
 
 .clip-bottom-left {
@@ -46,3 +46,14 @@ html {
   scroll-behavior: smooth;
 }
 
+
+/* Custom class to hide the scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* For Webkit browsers */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

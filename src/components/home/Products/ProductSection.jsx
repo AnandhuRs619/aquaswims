@@ -23,6 +23,8 @@ const productsData = {
       keyFeatures: [
         "Sleek and Elegant Design",
         "Minimalist Aesthetics",
+        "Minimalist Aesthetics",
+        "Compact and Lightweight",
         "Compact and Lightweight",
       ],
     },
@@ -120,8 +122,14 @@ const ProductSection = () => {
     slidesToScroll: 3,
   };
 
+  const onProductClick = (value) => {
+    console.log(value)
+    setSelectedProduct(value)
+  }
+
   return (
-    <div className="mx-auto p-6 mb-10">
+    <div className="min-h-screen mx-auto overflow-hidden mb-20 ">
+      {/* Title part */}
       <TitlePart
         Title="Products"
         subTitle1="Meet the"
@@ -130,36 +138,40 @@ const ProductSection = () => {
         left={true}
       />
 
-      {/* Category Tabs */}
-      <CategoryTabs
-        categories={Object.keys(productsData)}
-        selectedCategory={selectedCategory}
-        onCategoryChange={(category) => {
-          setSelectedCategory(category);
-          setSelectedProduct(null);
-        }}
-      />
+      {/* Body part */}
+      <div className="relative w-full h-full mt-3 ">
+        {/* bg-side gray part */}
+        <div className="h-full min-w-[98vw] lg:min-w-[50vw] bg-[#F5F5F5] absolute top-0 rounded-l-xl lg:rounded-l-2xl right-0 -z-10"> </div>
 
-      <Slider {...settings}>
-        {products.map((product,index ) => (
-          <ProductCard
-            key={index}
-            product={product}
-            onClick={() => onProductClick(product)}
-            isActive={selectedProduct?.id === product.id}
+        {/* Category Part */}
+        <div className="flex lg:items-end lg:justify-end  pt-1 lg:pt-2 px-3">
+          {/* Category Tabs */}
+          <CategoryTabs
+            categories={Object.keys(productsData)}
+            selectedCategory={selectedCategory}
+            onCategoryChange={(category) => {
+              setSelectedCategory(category);
+              setSelectedProduct(null);
+            }}
           />
-        ))}
-      </Slider>
+        </div>
 
-      {/* Product Slider */}
-      {/* <ProductSlider
-        products={products}
-        selectedProduct={selectedProduct}
-        onProductClick={(product) => setSelectedProduct(product)}
-      /> */}
+        {/* Product data  */}
+        <div className="flex gap-4 w-full h-full overflow-x-scroll lg:mt-5 px-6 lg:px-8 scrollbar-hide py-3 pb-5 lg:py-5 lg:pb-7">
+          {products.map((product, index) => (
+            <ProductCard
+              key={index}
+              product={product}
+              onClick={() => onProductClick(product)}
+              isActive={selectedProduct?.id === product.id}
+            />
+          ))}
+        </div>
 
-      {/* Product Details */}
-      {selectedProduct && <ProductDetails product={selectedProduct} />}
+        {/* Product Details */}
+        {selectedProduct && <ProductDetails product={selectedProduct} />}
+      </div>
+
     </div>
   );
 };

@@ -1,14 +1,14 @@
 const CategoryTabs = ({ categories, selectedCategory, onCategoryChange }) => {
     return (
-      <div className="flex space-x-4 mb-6 border-b-2 border-gray-200">
+      <div className="flex gap-2 lg:gap-5 mb-6 border-gray-200 lg:w-1/2">
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => onCategoryChange(category)}
-            className={`px-6 py-2 rounded-t-lg text-lg font-medium ${
+            className={`p-2 px-5 rounded-t-lg  text-sm lg:text-lg text-[#333333] font-thin ${
               selectedCategory === category
-                ? "bg-gray-100 border-gray-200"
-                : "bg-transparent"
+                ? "bg-white "
+                : "bg-transparent border-b-4 border-white"
             }`}
           >
             {category.replace(/([A-Z])/g, " $1").trim()}
