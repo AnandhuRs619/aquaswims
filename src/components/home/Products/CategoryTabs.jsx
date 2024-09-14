@@ -7,7 +7,7 @@ const CategoryTabs = ({ categories, selectedCategory, onCategoryChange }) => {
             onClick={() => onCategoryChange(category)}
             className={`p-2 px-5 rounded-t-lg  text-sm lg:text-lg text-[#333333] font-thin ${
               selectedCategory === category
-                ? "bg-white "
+                ? "bg-white text-[#daa520] "
                 : "bg-transparent border-b-4 border-white"
             }`}
           >

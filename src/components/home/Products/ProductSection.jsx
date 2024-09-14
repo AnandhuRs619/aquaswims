@@ -1,15 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
-import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import TitlePart from "../common/TitlePart";
-import capsuleHutImg from "../../../../public/assets/images/Pool Img1.jpg";
-import hrpFrpImg from "../../../../public/assets/images/Pool Img1.jpg";
+import capsuleHutImg from "../../../../public/assets/project/Project2img1.jpg";
+import hrpFrpImg from "../../../../public/assets/Product.png";
 import aquaSwimsImg from "../../../../public/assets/images/Pool Img1.jpg";
-import ProductSlider from "./ProductSlider";
 import ProductDetails from "./ProductDetails";
 import CategoryTabs from "./CategoryTabs";
 import ProductCard from "./ProductCard";
@@ -113,14 +107,6 @@ const ProductSection = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const products = productsData[selectedCategory];
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-  };
 
   const onProductClick = (value) => {
     console.log(value)

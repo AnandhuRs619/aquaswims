@@ -1,4 +1,3 @@
-import Navbar from "@/components/common/nav";
 import AboutUs from "@/components/home/about/AboutUs";
 import Banner from "@/components/home/Banner";
 import ContactUs from "@/components/home/contact-us/ContactUs";
@@ -12,8 +11,7 @@ import Testimonials from "@/components/home/Testimonials/Testimonials";
 
 export default function Home() {
   return (
-    <div className="">
-     
+    <div>
      <LandingPart/>
      <AboutUs/>
      <SubBrand/>

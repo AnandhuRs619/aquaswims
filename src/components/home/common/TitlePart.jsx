@@ -7,7 +7,7 @@ const TitlePart = ({ Title, subTitle1, subTitle2, highlight, left }) => {
         <p className="lg:text-2xl text-gray-500 uppercase mb-2 lg:mb-2">{Title}</p>
         <h1 className="text-2xl lg:text-[30px] text-gray-800 uppercase lg:leading-[46px]">
           {subTitle1}
-          <span className="text-xl lg:text-[30px] font-bold mx-2 text-gray-800 uppercase">
+          <span className="text-xl lg:text-[30px] font-bold mx-2 text-[#daa520] uppercase">
             {highlight}
           </span>
           {subTitle2}

@@ -1,15 +1,11 @@
 import React from "react";
 import VideoBackground from "./VideoBackground";
 import Link from "next/link";
-import Navbar from "../common/nav";
-
-
 
 
 const LandingPart = () => {
   return (
     <div className="h-screen relative w-full flex flex-col items-center text-white bg-white">
-      <Navbar/>
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="h-screen relative w-full flex flex-col items-center text-white bg-white">
           <div className="absolute w-screen h-screen bg-black/40 z-10 top-0 left-0"></div>
