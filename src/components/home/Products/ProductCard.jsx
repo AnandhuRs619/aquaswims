@@ -3,7 +3,7 @@ import Image from "next/image";
 const ProductCard = ({ product, onClick, isActive }) => {
   return (
     <div
-      className={`relative min-w-[250px] lg:min-w-[300px] overflow-hidden h-[250px] lg:h-[300px] shadow-lg rounded-xl cursor-pointer transform transition-transform 
+      className={`relative min-w-[250px] lg:min-w-[300px] overflow-hidden h-[250px] lg:h-[300px] bg-white shadow-lg rounded-xl cursor-pointer transform transition-transform 
         ${isActive ? "scale-105" : "border-transparent"}`}
       onClick={onClick}
     >
