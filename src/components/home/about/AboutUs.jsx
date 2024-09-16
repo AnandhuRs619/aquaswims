@@ -19,7 +19,7 @@ const AboutUs = () => {
       left={true}
       /> 
       <div data-aos="fade-up-right">
-       <p className="text-sm text-gray-600 my-5">
+       <p className="text-sm text-gray-700 my-5">
           From Modern Concepts to Fiberglass Pools - We’ve Got You Covered!
         </p>
         <p className="text-base text-gray-700">

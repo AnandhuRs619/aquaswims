@@ -11,7 +11,9 @@ const CategoryTabs = ({ categories, selectedCategory, onCategoryChange }) => {
                 : "bg-transparent border-b-4 border-white"
             }`}
           >
-            {category.replace(/([A-Z])/g, " $1").trim()}
+            {category === 'FRPGRP' 
+  ? 'FRP & GRP' 
+  : category}
           </button>
         ))}
       </div>

@@ -58,25 +58,25 @@ const Project = () => {
             subTitle2="Our Quirky Journey to Hardware Greatness!"
             left={false}
           />
-          <p className="text-base text-gray-600 my-5" data-aos="fade-up-left">
-            It's now easier than ever to give your space a makeover you deserve
-            for. Visit your nearest Jaquar World or Orientation Center or
-            Authorized Dealer to know more to choose from the wide range of
-            complete bathroom and lighting solutions. It's now easier than ever
-            to give your space a makeover you deserve for. Visit your nearest
-            Jaquar World or Orientation Center or Authorized Dealer to know more
-            to choose from the wide range of complete bathroom and lighting
-            solutions.
+          <p className="text-base text-gray-700 my-5" data-aos="fade-up-left">
+            We specialize in delivering cutting-edge solutions in FRP (Fiber
+            Reinforced Plastic) and GRP (Glass Reinforced Plastic) work,
+            offering durable, high-quality structures tailored to client
+            specifications. Our expertise extends to the construction of
+            swimming pools, ranging from custom-designed pools to readymade
+            options, ensuring aesthetic appeal and structural integrity.
           </p>
-          <p className="text-base text-gray-700" data-aos="fade-up-left">
-            It's now easier than ever to give your space a makeover you deserve
-            for. Visit your nearest Jaquar World or Orientation Center or
-            Authorized Dealer to know more to choose from the wide range of
-            complete bathroom and lighting solutions. It's now easier than ever
-            to give your space a makeover you deserve for. Visit your nearest
-            Jaquar World or Orientation Center or Authorized Dealer to know more
-            to choose from the wide range of complete bathroom and lighting
-            solutions.
+          <p className="text-base text-gray-700 my-5" data-aos="fade-up-left">
+            In addition to pool construction, we are pioneering the development
+            of capsule huts—compact, modern living spaces designed for comfort
+            and convenience. Our capsule huts are customizable, transportable,
+            and ideal for various settings, providing a perfect blend of
+            innovation and practicality.
+          </p>
+          <p className="text-base text-gray-700 my-5" data-aos="fade-up-left">
+            With a commitment to quality and customer satisfaction, we aim to
+            lead the industry in creating functional, sustainable, and
+            innovative construction solutions.
           </p>
         </div>
       </div>

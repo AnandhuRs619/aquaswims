@@ -7,100 +7,117 @@ import aquaSwimsImg from "../../../../public/assets/images/Pool Img1.jpg";
 import ProductDetails from "./ProductDetails";
 import CategoryTabs from "./CategoryTabs";
 import ProductCard from "./ProductCard";
+import { productsData } from "@/data/ProductData";
 
-const productsData = {
-  CapsuleHut: [
-    {
-      id: "e244",
-      name: "Hut - e244",
-      image: capsuleHutImg,
-      keyFeatures: [
-        "Sleek and Elegant Design",
-        "Minimalist Aesthetics",
-        "Minimalist Aesthetics",
-        "Compact and Lightweight",
-        "Compact and Lightweight",
-      ],
-    },
-    {
-      id: "e222",
-      name: "Hut - e244",
-      image: capsuleHutImg,
-      keyFeatures: [
-        "Sleek and Elegant Design",
-        "Minimalist Aesthetics",
-        "Compact and Lightweight",
-      ],
-    },
-    {
-      id: "e122",
-      name: "Hut - e244",
-      image: capsuleHutImg,
-      keyFeatures: [
-        "Sleek and Elegant Design",
-        "Minimalist Aesthetics",
-        "Compact and Lightweight",
-      ],
-    },
-    {
-      id: "e265",
-      name: "Hut - e244",
-      image: capsuleHutImg,
-      keyFeatures: [
-        "Sleek and Elegant Design",
-        "Minimalist Aesthetics",
-        "Compact and Lightweight",
-      ],
-    },
-    {
-      id: "e245",
-      name: "Hut - e244",
-      image: capsuleHutImg,
-      keyFeatures: [
-        "Sleek and Elegant Design",
-        "Minimalist Aesthetics",
-        "Compact and Lightweight",
-      ],
-    },
-    {
-      id: "e234",
-      name: "Hut - e244",
-      image: capsuleHutImg,
-      keyFeatures: [
-        "Sleek and Elegant Design",
-        "Minimalist Aesthetics",
-        "Compact and Lightweight",
-      ],
-    },
-    // Add more products here...
-  ],
-  HRPFRP: [
-    {
-      id: "f349",
-      name: "HRP - f349",
-      image: hrpFrpImg,
-      keyFeatures: [
-        "High-Quality Materials",
-        "Robust and Durable",
-        "Environmentally Friendly",
-      ],
-    },
-    // Add more products here...
-  ],
-  AquaSwims: [
-    {
-      id: "a750",
-      name: "Aqua Swims - a750",
-      image: aquaSwimsImg,
-      keyFeatures: [
-        "Innovative Design",
-        "Perfect for Water Activities",
-        "Lightweight and Portable",
-      ],
-    },
-    // Add more products here...
-  ],
-};
+// const productsData = {
+//   CapsuleHut: [
+//     {
+//       id: "e244",
+//       name: "Hut - e244",
+//       image: capsuleHutImg,
+//       keyFeatures: [
+//         {
+//           title: "Sleek and Elegant Design",
+//           details: [
+//             "Minimalist Aesthetics. Designed for style and functionality, perfect for both professionals and enthusiasts.",
+//             "Compact and Lightweight: Easily portable for on-the-go photography",
+//           ],
+//         },
+//         {
+//           title: "Minimalist Aesthetics",
+//           details: [
+//             "Minimalist Aesthetics. Designed for style and functionality, perfect for both professionals and enthusiasts.",
+//             "Compact and Lightweight: Easily portable for on-the-go photography",
+//           ],
+//         },
+//         {
+//           title: "Compact and Lightweight",
+//           details: [
+//             "Minimalist Aesthetics. Designed for style and functionality, perfect for both professionals and enthusiasts.",
+//             "Compact and Lightweight: Easily portable for on-the-go photography",
+//           ],
+//         },
+//       ],
+//     },
+//     {
+//       id: "e222",
+//       name: "Hut - e244",
+//       image: capsuleHutImg,
+//       keyFeatures: [
+//         "Sleek and Elegant Design",
+//         "Minimalist Aesthetics",
+//         "Compact and Lightweight",
+//       ],
+//     },
+//     {
+//       id: "e122",
+//       name: "Hut - e244",
+//       image: capsuleHutImg,
+//       keyFeatures: [
+//         "Sleek and Elegant Design",
+//         "Minimalist Aesthetics",
+//         "Compact and Lightweight",
+//       ],
+//     },
+//     {
+//       id: "e265",
+//       name: "Hut - e244",
+//       image: capsuleHutImg,
+//       keyFeatures: [
+//         "Sleek and Elegant Design",
+//         "Minimalist Aesthetics",
+//         "Compact and Lightweight",
+//       ],
+//     },
+//     {
+//       id: "e245",
+//       name: "Hut - e244",
+//       image: capsuleHutImg,
+//       keyFeatures: [
+//         "Sleek and Elegant Design",
+//         "Minimalist Aesthetics",
+//         "Compact and Lightweight",
+//       ],
+//     },
+//     {
+//       id: "e234",
+//       name: "Hut - e244",
+//       image: capsuleHutImg,
+//       keyFeatures: [
+//         "Sleek and Elegant Design",
+//         "Minimalist Aesthetics",
+//         "Compact and Lightweight",
+//       ],
+//     },
+//     // Add more products here...
+//   ],
+//   HRPFRP: [
+//     {
+//       id: "f349",
+//       name: "HRP - f349",
+//       image: hrpFrpImg,
+//       keyFeatures: [
+//         "High-Quality Materials",
+//         "Robust and Durable",
+//         "Environmentally Friendly",
+//       ],
+//     },
+//     // Add more products here...
+//   ],
+//   AquaSwims: [
+//     {
+//       id: "a750",
+//       name: "Aqua Swims - a750",
+//       image: aquaSwimsImg,
+//       keyFeatures: [
+//         "Innovative Design",
+//         "Perfect for Water Activities",
+//         "Lightweight and Portable",
+//       ],
+//     },
+//     // Add more products here...
+//   ],
+// };
 
 const ProductSection = () => {
   const [selectedCategory, setSelectedCategory] = useState("CapsuleHut");

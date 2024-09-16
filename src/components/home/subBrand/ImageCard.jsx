@@ -16,7 +16,7 @@ const ImageCard = ({ imageUrl, title }) => {
             className='w-20 h-20'
           />
           <div className="absolute inset-0 -top-2 -right-4 flex items-center justify-center">
-            <FiArrowUpRight className="text-gray-800 text-3xl font-extrabold" />
+            <FiArrowUpRight className="text-[#daa520] text-4xl font-extrabold transition-transform transform hover:scale-150" />
           </div>
         </div>
         <div className="absolute bottom-0 -left-4 w-72">
