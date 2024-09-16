@@ -1,8 +1,8 @@
-import React from 'react'
-import TitlePart from '../common/TitlePart'
-import Form from './Form'
-import Image from 'next/image'
-import img from '../../../../public/assets/images/contact-image.png'
+import React from 'react';
+import TitlePart from '../common/TitlePart';
+import Form from './Form';
+import Image from 'next/image';
+import img from '../../../../public/assets/images/contact-image.png';
 
 const ContactUs = () => {
   return (
@@ -16,7 +16,7 @@ const ContactUs = () => {
       /> 
 
       {/* Card Layout for Form and Image */}
-      <div className='mt-20 mb-10  max-w-6xl mx-auto border shadow-lg rounded-lg overflow-hidden bg-white'>
+      <div className='mt-20 mb-10 max-w-6xl mx-auto border shadow-lg rounded-lg overflow-hidden bg-white'>
         <div className='flex flex-col lg:flex-row items-stretch lg:h-[695px] gap-10'>
           
           {/* Form Section */}
@@ -25,12 +25,12 @@ const ContactUs = () => {
           </div>
 
           {/* Image Section */}
-          <div className='flex-1'>
+          <div className='hidden lg:flex flex-1'>
             <Image 
               src={img}
               width={450} 
               height={650}
-              className='object-cover w-full h-full  lg:rounded-r-lg'
+              className='object-cover w-full h-full lg:rounded-r-lg'
               alt="Contact Us"
             />
           </div>
@@ -38,7 +38,7 @@ const ContactUs = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default ContactUs
+export default ContactUs;

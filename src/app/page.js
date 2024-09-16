@@ -7,11 +7,14 @@ import ProductSection from "@/components/home/Products/ProductSection";
 import Project from "@/components/home/project/Project";
 import SubBrand from "@/components/home/subBrand/SubBrand";
 import Testimonials from "@/components/home/Testimonials/Testimonials";
+import BGImag from '../../public/assets/bg-business.png'
 
 
 export default function Home() {
   return (
-    <div>
+    <div className=" bg-center"
+    style={{ backgroundImage: `url(${BGImag.src} )` }}
+    >
      <LandingPart/>
      <AboutUs/>
      <SubBrand/>

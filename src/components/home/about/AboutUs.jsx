@@ -2,12 +2,12 @@ import React from 'react'
 import TitlePart from '../common/TitlePart'
 import image from '../../../../public/assets/images/AboutImg.png'
 import Image from 'next/image'
-import BGImag from '../../../../public/assets/BackgroundImg.png'
+import BGImag from '../../../../public/assets/bg-business.png'
 
 const AboutUs = () => {
   return (
-    <div className=' mx-auto p-6 mb-10 bg-cover bg-center'
-    style={{ backgroundImage: `url(${BGImag.src})` }}
+    <div className='mx-auto p-6 mb-10 '
+    // style={{ backgroundImage: `url(${BGImag.src} )` }}
     >
     <div className="flex flex-col lg:flex-row mt-20">
       <div className="lg:w-1/2">
