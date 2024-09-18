@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "@/components/common/NavBar";
 import Footer from "@/components/common/Footer";
 import AOSInitializer from "@/components/AOSInitializer";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
+          <ToastContainer />
           <NavBar/>
         <main className="overflow-hidden ">
           <AOSInitializer/>

@@ -11,7 +11,7 @@ const ProductCard = ({ product, onClick, isActive }) => {
         <Image
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-cover rounded-xl "
+          className="md:w-[450px] w-full h-full object-cover rounded-xl "
         />
         {
           isActive && (

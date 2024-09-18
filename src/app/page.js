@@ -7,23 +7,45 @@ import ProductSection from "@/components/home/Products/ProductSection";
 import Project from "@/components/home/project/Project";
 import SubBrand from "@/components/home/subBrand/SubBrand";
 import Testimonials from "@/components/home/Testimonials/Testimonials";
-import BGImag from '../../public/assets/bg-business.png'
-
+import BGImag from '../../public/assets/bg-business.png';
 
 export default function Home() {
   return (
-    <div className=" bg-center"
-    style={{ backgroundImage: `url(${BGImag.src} )` }}
+    <div
+      className="bg-center"
+      style={{ backgroundImage: `url(${BGImag.src})` }}
     >
-     <LandingPart/>
-     <AboutUs/>
-     <SubBrand/>
-     <ProductSection/>
-     <Project/>
-     <Banner/>
-     <Testimonials/>
-     <ContactUs/>
-     <PartnernshipCompanies/>
+      <section id="home">
+        <LandingPart />
+      </section>
+
+      <section id="about">
+        <AboutUs />
+      </section>
+
+      <section id="sub-brand">
+        <SubBrand />
+      </section>
+
+      <section id="products">
+        <ProductSection />
+      </section>
+
+      <section id="project">
+        <Project className="bg-white" />
+      </section>
+
+      <Banner />
+
+      <section id="testimonials">
+        <Testimonials />
+      </section>
+
+      <section id="contact">
+        <ContactUs />
+      </section>
+
+      <PartnernshipCompanies />
     </div>
   );
 }

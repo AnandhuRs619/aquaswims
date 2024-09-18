@@ -43,28 +43,28 @@ const NavBar = () => {
         {/* Navigation Links for Desktop */}
         <ul className="hidden md:flex space-x-8 text-black font-semibold text-lg">
           <li>
-            <Link href="/" className="hover:text-yellow-500">
-              <span>Home</span>
+            <Link href="#home" scroll={false} className="hover:text-yellow-500">
+              Home
             </Link>
           </li>
           <li>
-            <Link href="/" className="hover:text-yellow-500">
-              <span>About Us</span>
+            <Link href="#about" scroll={false} className="hover:text-yellow-500">
+              About Us
             </Link>
           </li>
           <li>
-            <Link href="/" className="hover:text-yellow-500">
-              <span>Product</span>
+            <Link href="#products" scroll={false} className="hover:text-yellow-500">
+              Product
             </Link>
           </li>
           <li>
-            <Link href="/" className="hover:text-yellow-500">
-              <span>Project</span>
+            <Link href="#project" scroll={false} className="hover:text-yellow-500">
+              Project
             </Link>
           </li>
           <li>
-            <Link href="/" className="hover:text-yellow-500">
-              <span>Contact Us</span>
+            <Link href="#contact" scroll={false} className="hover:text-yellow-500">
+              Contact Us
             </Link>
           </li>
         </ul>
@@ -80,28 +80,28 @@ const NavBar = () => {
         {menuOpen && (
           <ul className="absolute top-16 left-0 w-full bg-white shadow-lg flex flex-col items-center space-y-6 py-4 z-50 text-black font-semibold text-lg">
             <li>
-              <Link href="/" onClick={toggleMenu} className="hover:text-yellow-500">
-                <span>Home</span>
+              <Link href="#home" onClick={toggleMenu} scroll={false} className="hover:text-yellow-500">
+                Home
               </Link>
             </li>
             <li>
-              <Link href="/" onClick={toggleMenu} className="hover:text-yellow-500">
-                <span>About Us</span>
+              <Link href="#about" onClick={toggleMenu} scroll={false} className="hover:text-yellow-500">
+                About Us
               </Link>
             </li>
             <li>
-              <Link href="/" onClick={toggleMenu} className="hover:text-yellow-500">
-                <span>Product</span>
+              <Link href="#products" onClick={toggleMenu} scroll={false} className="hover:text-yellow-500">
+                Product
               </Link>
             </li>
             <li>
-              <Link href="/" onClick={toggleMenu} className="hover:text-yellow-500">
-                <span>Project</span>
+              <Link href="#project" onClick={toggleMenu} scroll={false} className="hover:text-yellow-500">
+                Project
               </Link>
             </li>
             <li>
-              <Link href="/" onClick={toggleMenu} className="hover:text-yellow-500">
-                <span>Contact Us</span>
+              <Link href="#contact" onClick={toggleMenu} scroll={false} className="hover:text-yellow-500">
+                Contact Us
               </Link>
             </li>
           </ul>

@@ -1,7 +1,8 @@
 export const companies = [
-    { name: 'Layers', logo: '/assets/images/layers.png' },
-    { name: 'Sisyphus', logo: '/assets/images/sisyphus.png' },
-    { name: 'Circooles', logo: '/assets/images/layers.png' },
-    { name: 'Catalog', logo: '/assets/images/sisyphus.png' },
-    { name: 'Quotient', logo: '/assets/images/quotient.png' },
+    { name: 'Adhani', logo: '/assets/VentureLogo/Adhanilogo.png' },
+    { name: 'GMR Airport', logo: '/assets/VentureLogo/Gmr Airport.png' },
+    { name: 'Imakepools', logo: '/assets/VentureLogo/imakepools_logo.png' },
+    { name: 'JMDpools', logo: '/assets/VentureLogo/JMDpools.png' },
+    { name: 'NeptuePools', logo: '/assets/VentureLogo/Neptune pools.png' },
+    { name: 'United Groups', logo: '/assets/VentureLogo/united group.png' },
   ];

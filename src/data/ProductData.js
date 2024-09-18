@@ -2,8 +2,11 @@
 import capsuleHutImg from "../../public/assets/project/Project2img1.jpg";
 import hrpFrpImg from "../../public/assets/Product.png";
 
-import AS25 from "../../public/assets/aquaswims/A25.png";
-import AS35 from "../../public/assets/aquaswims/A 35.png";
+import AS25 from "../../public/assets/products/aquaswims/A25.png";
+import AS35 from "../../public/assets/products/aquaswims/A 35.png";
+import GRAHAGRACE18 from "../../public/assets/products/capsuleHut/GrahaGrace 18.jpg"
+import GRAHAONWHEELS from "../../public/assets/products/capsuleHut/graha on wheel.png"
+import GRAHASHARATHAMS18 from "../../public/assets/products/capsuleHut/graha c18.jpg"
   
   
   
@@ -13,7 +16,7 @@ import AS35 from "../../public/assets/aquaswims/A 35.png";
       {
         id: "110",
         name: "GRAHA GRACE – 18",
-        image: capsuleHutImg,
+        image: GRAHAGRACE18,
         keyFeatures: [
           {
             title: "Steel/Wooden Structure",
@@ -56,7 +59,7 @@ import AS35 from "../../public/assets/aquaswims/A 35.png";
       {
         id: "111",
         name: "GRAHA SHARATHAM – S 18",
-        image: capsuleHutImg,
+        image: GRAHASHARATHAMS18,
         keyFeatures: [
             {
               title: "Rectangular Steel Structure",
@@ -98,8 +101,8 @@ import AS35 from "../../public/assets/aquaswims/A 35.png";
       },
       {
         id: "112",
-        name: "WHEELS HOMEZ",
-        image: capsuleHutImg,
+        name: "GRAHA ON WHEELS",
+        image: GRAHAONWHEELS,
         keyFeatures: [
             {
               title: "Mobile and Compact Design",
