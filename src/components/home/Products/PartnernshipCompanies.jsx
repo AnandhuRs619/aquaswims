@@ -4,8 +4,8 @@ import { companies } from '@/data/CompaniesData';
 
 const PartnernshipCompanies = () => {
   return (
-    <div className='mx-auto text-center mt-10 lg:mt-12 my-20 w-full '>
-      <p className='mb-6 text-accent text-lg'>From startups to the world’s largest companies</p>
+    <div className='mx-auto text-center mt-10 lg:mt-12 p-3 py-20 w-full '>
+      <p className='mb-6 text-gray-800 font-semibold text-lg'>Our Ventures</p>
       {/* Responsive Flexbox */}
       <div className='flex flex-wrap justify-center gap-4 sm:gap-10'>
       {companies.map((company, index) => (

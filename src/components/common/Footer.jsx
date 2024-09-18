@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin, FaWhatsapp } from 'reac
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-10  ">
+    <footer className="bg-white pb-10  ">
       <div className=" mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 ">
         {/* Information Section */}
         <div className="bg-white p-6">

@@ -6,7 +6,7 @@ import AS25 from "../../public/assets/products/aquaswims/A25.png";
 import AS35 from "../../public/assets/products/aquaswims/A 35.png";
 import GRAHAGRACE18 from "../../public/assets/products/capsuleHut/GrahaGrace 18.jpg"
 import GRAHAONWHEELS from "../../public/assets/products/capsuleHut/graha on wheel.png"
-import GRAHASHARATHAMS18 from "../../public/assets/products/capsuleHut/graha c18.jpg"
+import GRAHASHARATHAMS18 from "../../public/assets/products/capsuleHut/graha sharatham.png"
   
   
   

@@ -1,134 +1,30 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TitlePart from "../common/TitlePart";
-import capsuleHutImg from "../../../../public/assets/project/Project2img1.jpg";
-import hrpFrpImg from "../../../../public/assets/Product.png";
-import aquaSwimsImg from "../../../../public/assets/images/Pool Img1.jpg";
 import ProductDetails from "./ProductDetails";
 import CategoryTabs from "./CategoryTabs";
 import ProductCard from "./ProductCard";
+import ProductCardSkeleton from "./ProductCardSkeleton"; // Import skeleton
 import { productsData } from "@/data/ProductData";
-
-// const productsData = {
-//   CapsuleHut: [
-//     {
-//       id: "e244",
-//       name: "Hut - e244",
-//       image: capsuleHutImg,
-//       keyFeatures: [
-//         {
-//           title: "Sleek and Elegant Design",
-//           details: [
-//             "Minimalist Aesthetics. Designed for style and functionality, perfect for both professionals and enthusiasts.",
-//             "Compact and Lightweight: Easily portable for on-the-go photography",
-//           ],
-//         },
-//         {
-//           title: "Minimalist Aesthetics",
-//           details: [
-//             "Minimalist Aesthetics. Designed for style and functionality, perfect for both professionals and enthusiasts.",
-//             "Compact and Lightweight: Easily portable for on-the-go photography",
-//           ],
-//         },
-//         {
-//           title: "Compact and Lightweight",
-//           details: [
-//             "Minimalist Aesthetics. Designed for style and functionality, perfect for both professionals and enthusiasts.",
-//             "Compact and Lightweight: Easily portable for on-the-go photography",
-//           ],
-//         },
-//       ],
-//     },
-//     {
-//       id: "e222",
-//       name: "Hut - e244",
-//       image: capsuleHutImg,
-//       keyFeatures: [
-//         "Sleek and Elegant Design",
-//         "Minimalist Aesthetics",
-//         "Compact and Lightweight",
-//       ],
-//     },
-//     {
-//       id: "e122",
-//       name: "Hut - e244",
-//       image: capsuleHutImg,
-//       keyFeatures: [
-//         "Sleek and Elegant Design",
-//         "Minimalist Aesthetics",
-//         "Compact and Lightweight",
-//       ],
-//     },
-//     {
-//       id: "e265",
-//       name: "Hut - e244",
-//       image: capsuleHutImg,
-//       keyFeatures: [
-//         "Sleek and Elegant Design",
-//         "Minimalist Aesthetics",
-//         "Compact and Lightweight",
-//       ],
-//     },
-//     {
-//       id: "e245",
-//       name: "Hut - e244",
-//       image: capsuleHutImg,
-//       keyFeatures: [
-//         "Sleek and Elegant Design",
-//         "Minimalist Aesthetics",
-//         "Compact and Lightweight",
-//       ],
-//     },
-//     {
-//       id: "e234",
-//       name: "Hut - e244",
-//       image: capsuleHutImg,
-//       keyFeatures: [
-//         "Sleek and Elegant Design",
-//         "Minimalist Aesthetics",
-//         "Compact and Lightweight",
-//       ],
-//     },
-//     // Add more products here...
-//   ],
-//   HRPFRP: [
-//     {
-//       id: "f349",
-//       name: "HRP - f349",
-//       image: hrpFrpImg,
-//       keyFeatures: [
-//         "High-Quality Materials",
-//         "Robust and Durable",
-//         "Environmentally Friendly",
-//       ],
-//     },
-//     // Add more products here...
-//   ],
-//   AquaSwims: [
-//     {
-//       id: "a750",
-//       name: "Aqua Swims - a750",
-//       image: aquaSwimsImg,
-//       keyFeatures: [
-//         "Innovative Design",
-//         "Perfect for Water Activities",
-//         "Lightweight and Portable",
-//       ],
-//     },
-//     // Add more products here...
-//   ],
-// };
 
 const ProductSection = () => {
   const [selectedCategory, setSelectedCategory] = useState("CapsuleHut");
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [loading, setLoading] = useState(true); // Loading state
 
   const products = productsData[selectedCategory];
 
   const onProductClick = (value) => {
-    console.log(value)
-    setSelectedProduct(value)
-  }
+    console.log(value);
+    setSelectedProduct(value);
+  };
+
+  // Simulate loading effect (you can replace this with actual data fetching logic)
+  useEffect(() => {
+    setLoading(true);
+    const timeout = setTimeout(() => setLoading(false), 1000); // Simulate a 1-second delay
+    return () => clearTimeout(timeout);
+  }, [selectedCategory]);
 
   return (
     <div className="mx-auto overflow-hidden md:mb-20 ">
@@ -144,7 +40,8 @@ const ProductSection = () => {
       {/* Body part */}
       <div className="relative w-full h-full mt-3 pb-14">
         {/* bg-side gray part */}
-        <div className="h-full min-w-[98vw] md:min-w-[50vw] bg-[#f5f5f5] absolute top-0 rounded-l-xl md:rounded-l-2xl right-0 -z-10"> </div>
+        <div className="h-full min-w-[98vw] md:min-w-[50vw] bg-[#f5f5f5] absolute top-0 rounded-l-xl md:rounded-l-2xl right-0 -z-10">
+        </div>
 
         {/* Category Part */}
         <div className="flex md:items-end md:justify-end  pt-1 md:pt-2 px-3">
@@ -159,22 +56,25 @@ const ProductSection = () => {
           />
         </div>
 
-        {/* Product data  */}
-        <div className="flex gap-4 w-full h-full overflow-x-scroll md:mt-5 px-6 md:px-8 scrollbar-hide py-3 pb-5 md:py-5 md:pb-7">
-          {products.map((product, index) => (
-            <ProductCard
-              key={index}
-              product={product}
-              onClick={() => onProductClick(product)}
-              isActive={selectedProduct?.id === product.id}
-            />
-          ))}
+        {/* Product data */}
+        <div className="flex gap-6 w-full h-full overflow-x-scroll md:mt-5 px-6 md:px-8 scrollbar-hide py-3 pb-5 md:py-5 md:pb-7">
+          {loading
+            ? Array(5) // Render 5 skeletons while loading
+                .fill(0)
+                .map((_, index) => <ProductCardSkeleton key={index} />)
+            : products.map((product, index) => (
+                <ProductCard
+                  key={index}
+                  product={product}
+                  onClick={() => onProductClick(product)}
+                  isActive={selectedProduct?.id === product.id}
+                />
+              ))}
         </div>
 
         {/* Product Details */}
         {selectedProduct && <ProductDetails product={selectedProduct} />}
       </div>
-
     </div>
   );
 };

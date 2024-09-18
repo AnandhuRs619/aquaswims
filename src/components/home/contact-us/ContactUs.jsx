@@ -6,7 +6,7 @@ import img from '../../../../public/assets/images/contact-image.png';
 
 const ContactUs = () => {
   return (
-    <div className='mx-auto p-6'>
+    <div className=' mx-auto p-6 mb-10'>
       <TitlePart
         Title="Contact us"
         subTitle1="Have a Cool Projects ? "
