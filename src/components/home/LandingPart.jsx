@@ -4,8 +4,8 @@ import VideoBackground from "./VideoBackground";
 import Link from "next/link";
 
 const videos = [
-  { src: "/assets/videos/Top Video.mp4", title: "R&R INFRA & AQUASWIMS" },
   { src: "/assets/videos/BannerVid.mp4", title: "R&R INFRA & AQUASWIMS" },
+  { src: "/assets/videos/Top Video.mp4", title: "R&R INFRA & AQUASWIMS" },
   { src: "/assets/videos/Top Video.mp4", title: "R&R INFRA & AQUASWIMS" },
 ];
 
@@ -32,8 +32,8 @@ const LandingPart = () => {
         </div>
       </div>
 
-      <div className="absolute flex flex-col items-center justify-center gap-3 lg:gap-1 top-1/2">
-        <h1 className="lg:text-[4.5rem] text-[3rem] leading-[50px] lg:leading-[80px] font-bold z-10 text-center text-white opacity-60 capitalize">
+      <div data-aos="fade-up" data-aos-duration="3000" className="absolute flex flex-col items-center justify-center gap-3 lg:gap-1 top-1/2">
+        <h1  className="lg:text-[4.5rem] text-[3rem] leading-[50px] lg:leading-[80px] font-bold z-10 text-center text-white opacity-60 capitalize">
           {videos[currentVideo].title}
         </h1>
         <p className="lg:text-lg mt-4 text-base font-[400] text-center w-2/3 lg:w-full z-10">
