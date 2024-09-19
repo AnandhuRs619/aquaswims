@@ -1,6 +1,6 @@
 
-import capsuleHutImg from "../../public/assets/project/Project2img1.jpg";
-import hrpFrpImg from "../../public/assets/Product.png";
+import HORTICULTUREHUB from "../../public/assets/products/Horticulture.jpg";
+import themePark from "../../public/assets/products/TeamePark.jpg";
 
 import AS25 from "../../public/assets/products/aquaswims/A25.png";
 import AS35 from "../../public/assets/products/aquaswims/A 35.png";
@@ -151,7 +151,7 @@ import GRAHASHARATHAMS18 from "../../public/assets/products/capsuleHut/graha sha
       {
         id: "310",
         name: "HORTICULTURE HUB",
-        image: hrpFrpImg,
+        image: HORTICULTUREHUB,
         keyFeatures: [
             {
               title: "Comprehensive Plant Care Solutions",
@@ -200,7 +200,7 @@ import GRAHASHARATHAMS18 from "../../public/assets/products/capsuleHut/graha sha
       {
         id: "311",
         name: "Theme Park",
-        image: hrpFrpImg,
+        image: themePark,
         keyFeatures: [
             {
               title: "Diverse Rides and Attractions",

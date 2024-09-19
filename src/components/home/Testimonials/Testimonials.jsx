@@ -11,7 +11,7 @@ const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
 const Testimonials = () => {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: false,
     speed: 500,
     slidesToShow: 3,

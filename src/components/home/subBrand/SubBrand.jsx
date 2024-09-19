@@ -2,7 +2,7 @@ import React from 'react'
 import TitlePart from '../common/TitlePart'
 import ImageCard from './ImageCard'
 import img1 from '../../../../public/assets/images/Pool Img1.jpg'
-import img2 from '../../../../public/assets/project/Project2img1.jpg'
+import img2 from '../../../../public/assets/images/CapsuleHut.jpg'
 
 const SubBrand = () => {
   return (
