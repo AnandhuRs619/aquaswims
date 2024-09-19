@@ -15,15 +15,10 @@ const ContactUs = () => {
 
       {/* Card Layout for Form and Contact Details */}
       <div className='mt-20 mb-10 max-w-7xl mx-auto border shadow-lg rounded-lg overflow-hidden bg-white'>
-        <div className='flex flex-col lg:flex-row items-stretch lg:h-[695px] gap-10'>
+        <div className='flex flex-col lg:flex-row items-stretch lg:h-[750px] gap-10'>
 
-          {/* Form Section */}
-          <div className='flex-1 p-6 bg-white rounded-lg'>
-            <Form />
-          </div>
-
-          {/* Map and Company Details Section */}
-          <div className='flex-1 bg-gray-100 rounded-r-lg'>
+          {/* Map and Company Details Section - Will appear first in mobile view */}
+          <div className='flex-1 order-1 lg:order-2 bg-gray-100 rounded-r-lg'>
             {/* Map Embed */}
             <div className='mb-6'>
               <iframe
@@ -63,6 +58,11 @@ const ContactUs = () => {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Form Section - Will appear second in mobile view */}
+          <div className='flex-1 order-2 lg:order-1 p-6 bg-white rounded-lg'>
+            <Form />
           </div>
 
         </div>
