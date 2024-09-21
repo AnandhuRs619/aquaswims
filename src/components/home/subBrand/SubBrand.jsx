@@ -17,11 +17,11 @@ const SubBrand = () => {
         </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 md:gap-16 md:p-10">
             <ImageCard
-            title="Aquaswims Pools"
+            title="Aquaswims"
             imageUrl={img1}
             />
             <ImageCard
-            title="Capsule Huts"
+            title="Port Homesz"
             imageUrl={img2}
             />
 
