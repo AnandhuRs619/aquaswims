@@ -22,10 +22,18 @@ const ProductSection = () => {
   // Simulate loading effect (you can replace this with actual data fetching logic)
   useEffect(() => {
     setLoading(true);
-    const timeout = setTimeout(() => setLoading(false), 1000); // Simulate a 1-second delay
+    const timeout = setTimeout(() => {
+      setLoading(false);
+
+      // Set the first product as the selected product by default
+      if (products.length > 0) {
+        setSelectedProduct(products[0]);
+      }
+    }, 1000); // Simulate a 1-second delay
+
     return () => clearTimeout(timeout);
   }, [selectedCategory]);
-
+  
   return (
     <div className="mx-auto overflow-hidden md:mb-20 ">
       {/* Title part */}

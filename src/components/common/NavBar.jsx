@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import Logo from '../../../public/assets/Layer 2.png';
+import Logo from '../../../public/assets/RR Infra logo.png';
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
