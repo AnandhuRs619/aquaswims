@@ -22,7 +22,7 @@ const ContactUs = () => {
             {/* Map Embed */}
             <div className='mb-6'>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1027122567825!2d144.95373571531566!3d-37.81520797975186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf4c292128a0c6a0!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1613955501256!5m2!1sen!2sau"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1005886.0377072098!2d75.93762031249999!3d9.996830500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07e71e674de8a1%3A0x1640637c3742afa1!2sAQUA%20SWIM%20INDIA!5e0!3m2!1sen!2sin!4v1726936570500!5m2!1sen!2sin"
                 width="100%"
                 height="450"
                 allowFullScreen=""
@@ -38,7 +38,7 @@ const ContactUs = () => {
                 <MdLocationOn className='text-2xl text-blue-500 mr-2' />
                 <div>
                   <h4 className='text-lg font-semibold'>Our Location</h4>
-                  <p>1234 Main St, Melbourne, VIC 3000, Australia</p>
+                  <p> Aquaswims ,Perumattom, Kochi, Muvattupuzha, Kerala 686669</p>
                 </div>
               </div>
 
@@ -46,7 +46,7 @@ const ContactUs = () => {
                 <MdPhone className='text-2xl text-blue-500 mr-2' />
                 <div>
                   <h4 className='text-lg font-semibold'>Phone</h4>
-                  <p>+1 234 567 890</p>
+                  <p>+919495355982</p>
                 </div>
               </div>
 

@@ -5,8 +5,9 @@ import Link from "next/link";
 
 const videos = [
   { src: "/assets/videos/BannerVid.mp4", title: "R&R INFRA & AQUASWIMS" },
+  { src: "/assets/videos/4k swimmg.mp4", title: "R&R INFRA & AQUASWIMS" },
   { src: "/assets/videos/Top Video.mp4", title: "R&R INFRA & AQUASWIMS" },
-  { src: "/assets/videos/Top Video.mp4", title: "R&R INFRA & AQUASWIMS" },
+  { src: "/assets/videos/water blade.mp4", title: "R&R INFRA & AQUASWIMS" },
 ];
 
 const LandingPart = () => {
@@ -24,7 +25,7 @@ const LandingPart = () => {
     <div className="h-screen relative w-full flex flex-col items-center text-white bg-white">
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="h-screen relative w-full flex flex-col items-center text-white bg-white">
-          <div className="absolute w-screen h-screen bg-black/40 z-10 top-0 left-0"></div>
+          <div className="absolute w-screen h-screen bg-black/20 z-10 top-0 left-0"></div>
           <VideoBackground 
             videoSrc={videos[currentVideo].src} 
             onVideoEnd={handleVideoEnd} 

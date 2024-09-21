@@ -33,7 +33,7 @@ const ProductSection = () => {
 
     return () => clearTimeout(timeout);
   }, [selectedCategory]);
-  
+
   return (
     <div className="mx-auto overflow-hidden md:mb-20 ">
       {/* Title part */}
@@ -48,7 +48,7 @@ const ProductSection = () => {
       {/* Body part */}
       <div className="relative w-full h-full mt-3 pb-14">
         {/* bg-side gray part */}
-        <div className="h-full min-w-[98vw] md:min-w-[50vw] bg-[#f5f5f5] absolute top-0 rounded-l-xl md:rounded-l-2xl right-0 -z-10">
+        <div className="h-full min-w-[98vw] md:min-w-[50vw] bg-[#f5f5f5] drop-shadow-xl absolute top-0 rounded-l-xl md:rounded-l-2xl right-0 -z-10">
         </div>
 
         {/* Category Part */}

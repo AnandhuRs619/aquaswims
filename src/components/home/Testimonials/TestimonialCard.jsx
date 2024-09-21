@@ -17,7 +17,7 @@ const TestimonialCard = ({ image, text, name, designation }) => {
         <p className="text-sm text-gray-700 italic pb-5">"{text}"</p>
         <div className="text-left">
           <h3 className="text-lg font-bold text-black">{name}</h3>
-          <p className="text-sm text-gray-500">{designation}</p>
+          {/* <p className="text-sm text-gray-500">{designation}</p> */}
         </div>
       </div>
     </div>
