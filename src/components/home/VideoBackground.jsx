@@ -7,7 +7,7 @@ const VideoBackground = ({ videoSrc, onVideoEnd }) => {
     const video = videoRef.current;
     if (video) {
       video.load();
-      video.play().catch(error => console.error("Video play error:", error));
+      video.play().catch((error) => console.error("Video play error:", error));
     }
   }, [videoSrc]);
 
@@ -19,7 +19,7 @@ const VideoBackground = ({ videoSrc, onVideoEnd }) => {
     const video = videoRef.current;
     if (video) {
       video.currentTime = 0;
-      video.play().catch(error => console.error("Video play error:", error));
+      video.play().catch((error) => console.error("Video play error:", error));
     }
     onVideoEnd();
   };

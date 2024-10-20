@@ -18,14 +18,15 @@ const Project = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // 5 seconds interval for the carousel
+    }, 5000);
 
-    return () => clearInterval(interval); // Clear the interval on component unmount
+    return () => clearInterval(interval); 
   }, []);
 
   return (
     <div className=" mx-auto p-6 mb-10">
       <div className="flex flex-col lg:flex-row mt-10 lg:gap-16 gap-8">
+        
         <div className="relative flex lg:w-1/2 mt-10 lg:mt-0 lg:ml-10">
           <div className="relative w-full h-[400px] lg:h-[550px] rounded-l-xl overflow-hidden">
             <Image
