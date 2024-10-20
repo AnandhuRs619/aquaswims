@@ -8,11 +8,12 @@ import Project from "@/components/home/project/Project";
 import SubBrand from "@/components/home/subBrand/SubBrand";
 import Testimonials from "@/components/home/Testimonials/Testimonials";
 import BGImag from '../../public/assets/bg-business.png';
+import FloatingIcons from "@/components/common/FloathingIcons";
 
 export default function Home() {
   return (
     <div
-      className="bg-center"
+    className="bg-center scrollbar-hide overflow-hidden" 
       style={{ backgroundImage: `url(${BGImag.src})` }}
     >
       <section id="home">
@@ -46,6 +47,7 @@ export default function Home() {
       </section>
 
       <PartnernshipCompanies />
+      <FloatingIcons/>
     </div>
   );
 }

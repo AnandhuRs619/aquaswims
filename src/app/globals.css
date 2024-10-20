@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @import "~react-toastify/dist/ReactToastify.css";
 
 @layer utilities {
@@ -12,8 +11,23 @@
 body {
   font-family: var(--font-neuton);
 }
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
 .slick-slide > div {
-  margin: 0 10px ;
+  margin: 0 10px;
 }
 
 .clip-top-right {
@@ -40,20 +54,3 @@ body {
   z-index: 1;
 }
 
-/* styles/globals.css */
-
-html {
-  scroll-behavior: smooth;
-}
-
-
-/* Custom class to hide the scrollbar */
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-/* For Webkit browsers */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
