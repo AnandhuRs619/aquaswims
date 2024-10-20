@@ -9,7 +9,7 @@ import {
   MdChat,
 } from "react-icons/md";
 import ContactCard from "./ContactCard";
-import { FaInstagram, FaQrcode } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram, FaQrcode } from "react-icons/fa";
 import CountryContacts from "./CountryContacts";
 
 const ContactUs = () => {
@@ -30,7 +30,7 @@ const ContactUs = () => {
           subtitle="Mon-Fri 8.30am-5.30pm"
         />
         <ContactCard
-          icon={<MdFacebook />}
+          icon={<FaFacebookSquare />}
           title="FACEBOOK"
           link={""}
           subtitle="Follow us on Facebook"
