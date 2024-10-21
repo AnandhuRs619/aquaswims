@@ -9,9 +9,13 @@ import {
   MdChat,
 } from "react-icons/md";
 import ContactCard from "./ContactCard";
-import { FaFacebookSquare, FaInstagram, FaQrcode } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram, } from "react-icons/fa";
 import CountryContacts from "./CountryContacts";
-
+const phoneNumbers = [
+  { country: "USA", number: "+12818817650" },
+  { country: "UK", number: "++447721688478" },
+  { country: "KENYA", number: "+254705133234" },
+];
 const ContactUs = () => {
   return (
     <div className="mx-auto p-6 mb-10">
@@ -23,10 +27,10 @@ const ContactUs = () => {
       />
       {/* Cards Section */}
       <div className="flex flex-wrap justify-center gap-8 mt-10">
-        <ContactCard
+      <ContactCard
           icon={<MdPhone />}
           title="+91 8156881818"
-          link={""}
+          numbers={phoneNumbers}
           subtitle="Mon-Fri 8.30am-5.30pm"
         />
         <ContactCard
@@ -42,20 +46,20 @@ const ContactUs = () => {
           subtitle="Follow us on Instagram"
         />
         <ContactCard
-          icon={<FaQrcode />}
-          title="QR Code"
+          icon={<MdEmail />}
+          title="Mail"
           link={""}
           subtitle="Add Friend with QR Code"
         />
       </div>
       {/* Contact Information Section */}
-      <div className="mt-16 border-b-2 py-10">
+      <div className="mt-16 bg-white shadow-md rounded-md border py-10">
         <h2 className="text-center text-lg font-semibold mb-8 uppercase">
           We Engineer the Future...
         </h2>
-        <p className="text-center text-blue-700 text-lg font-bold underline mb-4">
+        {/* <p className="text-center text-blue-700 text-lg font-bold underline mb-4">
           <a href="mailto:info@aquaswims.com">INFO@AQUASWIMS.COM</a>
-        </p>
+        </p> */}
 
         {/* Country Contacts Component */}
         <CountryContacts />
