@@ -6,9 +6,7 @@ const ProjectCard = ({ image, index, rowSpan, colSpan }) => {
   return (
     <div
       className={`relative group overflow-hidden rounded-lg shadow-lg transition-all duration-300 cursor-pointer 
-      col-span-${colSpan} row-span-${rowSpan}
-      sm:col-span-${colSpan} sm:row-span-${rowSpan}  // For mobile scaling
-      `}
+      col-span-${colSpan} row-span-${rowSpan}`}
       style={{
         gridRowEnd: `span ${rowSpan || 1}`,
         gridColumnEnd: `span ${colSpan || 1}`,

@@ -11,7 +11,7 @@ const FloatingIcons = () => {
           WhatsApp
         </span>
         <a
-          href="https://wa.me/yourWhatsAppNumber" // replace with your actual WhatsApp number
+          href="https://wa.me/+918156881818"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-green-500 p-4 rounded-full shadow-lg text-white hover:bg-green-600 transition-colors"
@@ -27,7 +27,7 @@ const FloatingIcons = () => {
           Phone
         </span>
         <a
-          href="tel:+1234567890" // replace with your actual phone number
+          href="tel:+918156881818" // replace with your actual phone number
           className="bg-blue-500 p-4 rounded-full shadow-lg text-white hover:bg-blue-600 transition-colors"
           aria-label="Call us"
         >

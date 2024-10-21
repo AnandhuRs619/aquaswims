@@ -13,13 +13,27 @@ const videos = [
 
 const LandingPart = () => {
   const [currentVideo, setCurrentVideo] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false); // State for transitions
+  const [isLoading, setIsLoading] = useState(false); // State for loading
 
   const handleNext = () => {
-    setCurrentVideo((prev) => (prev + 1) % videos.length);
+    setIsTransitioning(true); // Start the transition
+    setIsLoading(true); // Start loading animation
+    setTimeout(() => {
+      setCurrentVideo((prev) => (prev + 1) % videos.length);
+      setIsTransitioning(false); // End the transition
+      setIsLoading(false); // End loading animation
+    }, 500); // Match the duration of your CSS transition
   };
 
   const handlePrev = () => {
-    setCurrentVideo((prev) => (prev - 1 + videos.length) % videos.length);
+    setIsTransitioning(true); // Start the transition
+    setIsLoading(true); // Start loading animation
+    setTimeout(() => {
+      setCurrentVideo((prev) => (prev - 1 + videos.length) % videos.length);
+      setIsTransitioning(false); // End the transition
+      setIsLoading(false); // End loading animation
+    }, 500); // Match the duration of your CSS transition
   };
 
   const handleVideoEnd = () => {
@@ -32,7 +46,7 @@ const LandingPart = () => {
 
   return (
     <div className="h-screen relative w-full flex flex-col items-center text-white bg-white">
-      <div className="absolute top-0 left-0 w-full h-full">
+      <div className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
         <div className="h-screen relative w-full flex flex-col items-center text-white bg-white">
           <div className="absolute w-screen h-screen bg-black/20 z-10 top-0 left-0"></div>
           <VideoBackground 
@@ -41,6 +55,13 @@ const LandingPart = () => {
           />
         </div>
       </div>
+
+      {/* Loading Spinner */}
+      {isLoading && (
+        <div className="absolute flex justify-center items-center w-full h-full z-30">
+          <div className="animate-spin h-20 w-20 border-4 border-t-transparent border-white rounded-full"></div>
+        </div>
+      )}
 
       {/* Buttons for navigation */}
       <div className="absolute flex justify-between w-full px-8 top-1/2 transform -translate-y-1/2 z-20">
@@ -77,7 +98,15 @@ const LandingPart = () => {
                 ? "w-8 h-3 bg-white rounded-md"
                 : "w-3 h-3 bg-white/60 rounded-full"
             }`}
-            onClick={() => setCurrentVideo(index)}
+            onClick={() => {
+              setIsTransitioning(true);
+              setIsLoading(true);
+              setTimeout(() => {
+                setCurrentVideo(index);
+                setIsTransitioning(false);
+                setIsLoading(false);
+              }, 500);
+            }}
           ></span>
         ))}
       </div>

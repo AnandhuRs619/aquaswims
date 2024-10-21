@@ -5,4 +5,6 @@ export const companies = [
     { name: 'JMDpools', logo: '/assets/VentureLogo/JMDpools.png' },
     { name: 'NeptuePools', logo: '/assets/VentureLogo/Neptune pools.png' },
     { name: 'United Groups', logo: '/assets/VentureLogo/united group.png' },
+    { name: 'Poolscapes india', logo: '/assets/VentureLogo/logo-light.png' },
+    { name: 'Joypools', logo: '/assets/VentureLogo/joypools-logo.png' },
   ];
