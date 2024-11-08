@@ -42,7 +42,7 @@ const ContactUs = () => {
         <ContactCard
           icon={<FaInstagram />}
           title="Instagram"
-          link={""}
+          link={"https://www.instagram.com/rrinfra1818?igsh=ajE3OGs1enNwNm5y "}
           subtitle="Follow us on Instagram"
         />
         <ContactCard
