@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md"; // Import icons
 
 const videos = [
+  { src: "/assets/videos/lastvid.mp4", title: "R&R INFRA & AQUASWIMS" },
   { src: "/assets/videos/BannerVid.mp4", title: "R&R INFRA & AQUASWIMS" },
   { src: "/assets/videos/4k swimmg.mp4", title: "R&R INFRA & AQUASWIMS" },
   { src: "/assets/videos/Top Video.mp4", title: "R&R INFRA & AQUASWIMS" },

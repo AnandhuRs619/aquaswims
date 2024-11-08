@@ -9,7 +9,7 @@ import {
   MdChat,
 } from "react-icons/md";
 import ContactCard from "./ContactCard";
-import { FaFacebookSquare, FaInstagram, } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import CountryContacts from "./CountryContacts";
 const phoneNumbers = [
   { country: "USA", number: "+12818817650" },
@@ -27,10 +27,10 @@ const ContactUs = () => {
       />
       {/* Cards Section */}
       <div className="flex flex-wrap justify-center gap-8 mt-10">
-      <ContactCard
-          icon={<MdPhone />}
+        <ContactCard
+          icon={<FaWhatsapp />}
           title="+91 8156881818"
-          numbers={phoneNumbers}
+          link={"https://wa.me/+918156881818"}
           subtitle="Mon-Fri 8.30am-5.30pm"
         />
         <ContactCard
@@ -47,13 +47,13 @@ const ContactUs = () => {
         />
         <ContactCard
           icon={<MdEmail />}
-          title="Mail"
-          link={""}
+          title="info@aquaswims.com"
+          link={"mailto:info@aquaswims.com"}
           subtitle="Add Friend with QR Code"
         />
       </div>
       {/* Contact Information Section */}
-      <div className="mt-16 bg-white shadow-md rounded-md border py-10">
+      <div className="mt-16 bg-white shadow-2xl rounded-lg border py-10">
         <h2 className="text-center text-lg font-semibold mb-8 uppercase">
           We Engineer the Future...
         </h2>
